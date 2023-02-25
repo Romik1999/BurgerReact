@@ -1,20 +1,18 @@
-import {useState} from 'react'
-import {Container} from "./components/Container/Container";
+import React from 'react'
 import {Header} from "./components/Header/Header";
+import {Navigation} from "./components/Navigation/Navigation";
+import {Catalog} from "./components/Catalog/Catalog";
+import {Footer} from "./components/Footer/Footer";
 
 export const App = () => {
-    const [count, setCount] = useState(0)
-
     return (
         <>
             <Header />
             <main>
-                <nav>
-                    <Container maks="leskin" className="navigation__container"/>
-                </nav>
-                <section></section>
+                <Navigation/>
+                <Catalog/>
             </main>
-            <footer></footer>
+            <Footer/>
         </>
     )
 }

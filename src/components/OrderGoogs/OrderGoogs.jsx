@@ -3,9 +3,9 @@ import style from "./OrderGoogs.module.css"
 import {Count} from "../Count/Count";
 import classNames from "classnames";
 
-export const OrderGoogs = () => {
+export const OrderGoogs = ({i, item}) => {
     return (
-        <li className={style.item}>
+        <li key={i} className={style.item}>
             <img className={style.image} src="img/burger_1.jpg" alt="Супер сырный"/>
 
             <div className={classNames(style.goods, style.goods)}>
@@ -18,7 +18,7 @@ export const OrderGoogs = () => {
                 </p>
             </div>
 
-           <Count/>
+           <Count count={1}/>
         </li>
     );
 }
